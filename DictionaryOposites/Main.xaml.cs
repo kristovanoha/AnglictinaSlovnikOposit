@@ -30,6 +30,8 @@ namespace DictionaryOposites
       
         private void MainForm_Loaded(object sender, RoutedEventArgs e)
         {
+
+            //neco
             _context.TestTable.Load();
 
             List<TestTable> dd = _context.TestTable.ToList();
