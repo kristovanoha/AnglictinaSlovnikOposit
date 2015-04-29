@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,18 @@ namespace DictionaryOposites
         public Main()
         {
             InitializeComponent();
+        }
+
+
+        private DatabasesMainEntities _context = new DatabasesMainEntities();
+      
+        private void MainForm_Loaded(object sender, RoutedEventArgs e)
+        {
+            _context.TestTable.Load();
+
+            List<TestTable> dd = _context.TestTable.ToList();
+            GridTest.ItemsSource = dd;
+    
         }
     }
 }
