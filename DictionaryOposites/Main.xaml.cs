@@ -10,22 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DictionaryOposites
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : Window
     {
-        public MainWindow()
+        public Main()
         {
-            //from axa 2
-            //from v 2
-            //Frm AXA
-            //from home
             InitializeComponent();
         }
     }
