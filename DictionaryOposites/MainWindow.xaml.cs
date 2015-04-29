@@ -22,6 +22,7 @@ namespace DictionaryOposites
     {
         public MainWindow()
         {
+            //Frm AXA
             InitializeComponent();
         }
     }
