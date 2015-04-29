@@ -82,7 +82,7 @@
     <Compile Include="TestTable.cs">
       <DependentUpon>ModelMain.tt</DependentUpon>
     </Compile>
-    <Page Include="Main.xaml">
+    <Page Include="MainForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -90,8 +90,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Main.xaml.cs">
-      <DependentUpon>Main.xaml</DependentUpon>
+    <Compile Include="MainForm.xaml.cs">
+      <DependentUpon>MainForm.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
