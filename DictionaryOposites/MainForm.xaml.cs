@@ -43,22 +43,18 @@ namespace DictionaryOposites
         {
             var dfo = _context.TestTable.ToList();
             _context.SaveChangesAsync();
-            //_context.TestTable.Load();
             TestTable tt = new TestTable();
-        //    tt = _context.TestTable.First(i => i.Cislo == 1);
-            tt = _context.TestTable.First();
-            tt.Name = "pridavek";
-            tt.Popis = "jedu";
-         //   _context.TestTable.Add(tt);
-          //  _context.TestTable
-          //     _context.
-          //    _context.SaveChangesAsync();
-
+            tt.Name = "Jmeno " + _context.TestTable.Count() + 1;
+            tt.Popis = "Novy pridavek  " + _context.TestTable.Count() + 1;
+            tt.Id = _context.TestTable.Count() + 1;
+            tt.Cislo = _context.TestTable.Count() + 1;
+            tt = _context.TestTable.Add(tt);
 
 
            _context.SaveChanges();
 
-
+           List<TestTable> dd = _context.TestTable.ToList();
+           GridTest.ItemsSource = dd;
         }
 
         private void MainForm_Closed(object sender, EventArgs e)
