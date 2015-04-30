@@ -62,5 +62,15 @@ namespace DictionaryOposites
         {
             _context.Dispose();
         }
+
+        private void Grid_Initialized(object sender, EventArgs e)
+        {
+
+            string path = System.Environment.CurrentDirectory;
+
+            //        string executable = System.Reflection.Assembly.GetExecutingAssembly().Location;
+           // string path = (System.IO.Path.GetDirectoryName(executable));
+            AppDomain.CurrentDomain.SetData("DataDirectory", path);
+        }
     }
 }

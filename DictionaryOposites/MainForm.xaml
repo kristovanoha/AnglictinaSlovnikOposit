@@ -3,15 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:DictionaryOposites" x:Name="MainForm" x:Class="DictionaryOposites.Main"
         Title="Main" Height="300" Width="421" Loaded="MainForm_Loaded" Closed="MainForm_Closed">
-    <Grid Margin="0,0,2,-5">
+    <Grid Margin="0,0,2,-5" Initialized="Grid_Initialized">
         <Grid.DataContext>
             <local:TestTable Cislo="1"/>
         </Grid.DataContext>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="107*"/>
-            <ColumnDefinition Width="39*"/>
+            <ColumnDefinition Width="265*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="110*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="GridTest" HorizontalAlignment="Left" Margin="23,25,0,0" VerticalAlignment="Top" Height="187" Width="217" Grid.ColumnSpan="2">
+        <DataGrid x:Name="GridTest" HorizontalAlignment="Left" Margin="23,25,0,0" VerticalAlignment="Top" Height="187" Width="217">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
                 <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}"/>
