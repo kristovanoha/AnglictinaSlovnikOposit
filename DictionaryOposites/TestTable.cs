@@ -16,5 +16,6 @@ namespace DictionaryOposites
     {
         public string Name { get; set; }
         public int Cislo { get; set; }
+        public string Popis { get; set; }
     }
 }

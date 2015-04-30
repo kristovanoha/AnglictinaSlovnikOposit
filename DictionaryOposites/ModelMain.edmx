@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DictionareOpositesModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=Database\DictionareOposites.sqlite" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DictionareOpositesModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\Users\hegarj\Source\Repos\AnglictinaSlovnikOposit\DictionaryOposites\Database\DictionareOposites.sqlite" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <!--Errors Found During Generation:
 warning 6002: The table/view 'main.TestTable' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TestTable">
@@ -14,17 +14,18 @@ warning 6002: The table/view 'main.TestTable' does not have a primary key define
           </Key>
           <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Cislo" Type="int" Nullable="false" />
+          <Property Name="Popis" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="DictionareOpositesModelStoreContainer">
           <EntitySet Name="TestTable" EntityType="Self.TestTable" store:Type="Tables">
             <DefiningQuery>SELECT 
 [TestTable].[Name] AS [Name], 
-[TestTable].[Cislo] AS [Cislo]
+[TestTable].[Cislo] AS [Cislo], 
+[TestTable].[Popis] AS [Popis]
 FROM [TestTable] AS [TestTable]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DictionareOpositesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -35,6 +36,7 @@ FROM [TestTable] AS [TestTable]</DefiningQuery>
           </Key>
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Cislo" Type="Int32" Nullable="false" />
+          <Property Name="Popis" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="DatabasesMainEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TestTable" EntityType="Self.TestTable" />
@@ -48,6 +50,7 @@ FROM [TestTable] AS [TestTable]</DefiningQuery>
           <EntitySetMapping Name="TestTable">
             <EntityTypeMapping TypeName="DictionareOpositesModel.TestTable">
               <MappingFragment StoreEntitySet="TestTable">
+                <ScalarProperty Name="Popis" ColumnName="Popis" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Cislo" ColumnName="Cislo" />
               </MappingFragment>
