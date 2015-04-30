@@ -41,18 +41,22 @@ namespace DictionaryOposites
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var dfo = _context.TestTable.ToList();
+            _context.SaveChangesAsync();
             //_context.TestTable.Load();
             TestTable tt = new TestTable();
         //    tt = _context.TestTable.First(i => i.Cislo == 1);
-            tt.Popis = tt.Name + tt.Cislo;
-            tt.Cislo = 8;
+
             tt.Name = "pridavek";
             tt.Popis = "jedu";
             _context.TestTable.Add(tt);
           //  _context.TestTable
-       //     _context.
-        //    _context.SaveChangesAsync();
-            _context.SaveChanges();
+          //     _context.
+          //    _context.SaveChangesAsync();
+
+
+
+      //      _context.SaveChanges();
 
 
         }
