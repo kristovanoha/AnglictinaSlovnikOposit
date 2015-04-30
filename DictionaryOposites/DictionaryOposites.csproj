@@ -122,9 +122,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Content Include="Database\DictionareOposites.sqlite">
+    <None Include="Database\DictionareOposites.sqlite">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
     <EntityDeploy Include="ModelMain.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelMain.Designer.cs</LastGenOutput>

@@ -56,5 +56,10 @@ namespace DictionaryOposites
 
 
         }
+
+        private void MainForm_Closed(object sender, EventArgs e)
+        {
+            _context.Dispose();
+        }
     }
 }
