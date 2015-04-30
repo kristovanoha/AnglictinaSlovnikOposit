@@ -26,7 +26,7 @@ namespace DictionaryOposites
         }
 
 
-        private DatabasesMainEntities _context = new DatabasesMainEntities();
+        private DictionareOpositesEntities _context = new DictionareOpositesEntities();
       
         private void MainForm_Loaded(object sender, RoutedEventArgs e)
         {
@@ -46,17 +46,17 @@ namespace DictionaryOposites
             //_context.TestTable.Load();
             TestTable tt = new TestTable();
         //    tt = _context.TestTable.First(i => i.Cislo == 1);
-
+            tt = _context.TestTable.First();
             tt.Name = "pridavek";
             tt.Popis = "jedu";
-            _context.TestTable.Add(tt);
+         //   _context.TestTable.Add(tt);
           //  _context.TestTable
           //     _context.
           //    _context.SaveChangesAsync();
 
 
 
-      //      _context.SaveChanges();
+           _context.SaveChanges();
 
 
         }
