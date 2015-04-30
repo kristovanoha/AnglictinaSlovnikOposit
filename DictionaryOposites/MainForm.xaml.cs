@@ -41,7 +41,7 @@ namespace DictionaryOposites
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            // pridavek
+            // pridavek ds
             var dfo = _context.TestTable.ToList();
             _context.SaveChangesAsync();
             TestTable tt = new TestTable();
